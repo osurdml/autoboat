@@ -12,10 +12,9 @@ Initialize the QGroundControl (QGC) and MavLink submodules:
 git submodule update --init --recursive
 ```
 
-Follow the [official
-directions](https://github.com/mavlink/qgroundcontrol#build-on-linux) to build
-QGC. The following is the minimum necessary steps required to get things going
-in Ubuntu:
+The following are the minimal necessary steps required to get QGC set up in
+Ubuntu. For full instructions, see the [official
+readme](https://github.com/mavlink/qgroundcontrol#build-on-linux).
 
 ```bash
 sudo apt-get install qtcreator qttools5-dev qtbase5-dev qt5-default qtdeclarative5-dev libqt5serialport5-dev libqt5svg5-dev libqt5webkit5-dev libsdl1.2-dev build-essential libudev-dev
