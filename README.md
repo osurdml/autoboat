@@ -4,6 +4,28 @@ _Autonomous boat base station setup_
 
 For use with autonomous (Pixhawk) MOKAI jetboat performing waypoint navigation.
 
+Setup
+-----
+Initialize the QGroundControl (QGC) and MavLink submodules:
+
+```bash
+git submodule update --init --recursive
+```
+
+Follow the [official
+directions](https://github.com/mavlink/qgroundcontrol#build-on-linux) to build
+QGC. The following is the minimum necessary steps required to get things going
+in Ubuntu:
+
+```bash
+sudo apt-get install qtcreator qttools5-dev qtbase5-dev qt5-default qtdeclarative5-dev libqt5serialport5-dev libqt5svg5-dev libqt5webkit5-dev libsdl1.2-dev build-essential libudev-dev
+cd qgroundcontrol
+qmake
+make
+```
+
+If anything goes wrong, refer to the [build
+notes](https://github.com/mavlink/qgroundcontrol#additional-build-notes-for-all-supported-os).
 
 Boat
 ----
