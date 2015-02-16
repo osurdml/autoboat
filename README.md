@@ -6,25 +6,34 @@ For use with autonomous (Pixhawk) MOKAI jetboat performing waypoint navigation.
 
 Setup
 -----
-Initialize the QGroundControl (QGC) and MavLink submodules:
+Initialize the APM Planner and MavLink submodules:
 
 ```bash
 git submodule update --init --recursive
 ```
 
-The following are the minimal necessary steps required to get QGC set up in
+The following are the minimal necessary steps required to get APM Planner set up in
 Ubuntu. For full instructions, see the [official
-readme](https://github.com/mavlink/qgroundcontrol#build-on-linux).
+readme](https://github.com/diydrones/apm_planner#linux-).
 
 ```bash
-sudo apt-get install qtcreator qttools5-dev qtbase5-dev qt5-default qtdeclarative5-dev libqt5serialport5-dev libqt5svg5-dev libqt5webkit5-dev libsdl1.2-dev build-essential libudev-dev
-cd qgroundcontrol
-qmake
+sudo apt-get update
+sudo apt-get install git qt5-qmake qt5-default \
+       qtscript5-dev libqt5webkit5-dev libqt5serialport5-dev \
+       libqt5svg5-dev libsdl1.2-dev  libsndfile-dev \
+       flite1-dev libssl-dev libudev-dev libsdl2-dev
+
+cd apm_planner
+qmake qgroundcontrol.pro
 make
 ```
 
-If anything goes wrong, refer to the [build
-notes](https://github.com/mavlink/qgroundcontrol#additional-build-notes-for-all-supported-os).
+Run APM Planner:
+
+```bash
+./release/apmplanner2
+```
+
 
 Boat
 ----
@@ -44,4 +53,4 @@ need to splice the Pixhawk into the control electronics.
 
 Base
 ----
-QGroundcontrol, usage TBD.
+APM Planner, usage TBD.
