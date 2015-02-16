@@ -1,3 +1,6 @@
 [submodule "qgroundcontrol"]
 	path = qgroundcontrol
 	url = git@github.com:mavlink/qgroundcontrol
+[submodule "apm_planner"]
+	path = apm_planner
+	url = git@github.com:diydrones/apm_planner.git
